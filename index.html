@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InterioCraft | Minimal & Simple Interior Designs for Houses</title>
+  <meta name="description" content="InterioCraft specializes in minimal, simple, and elegant interior designs for houses. Founded by Abdul Samad Y. Explore our completed works and get in touch." />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            craft: {
+              bg: '#FAF8F5',
+              surface: '#FFFFFF',
+              stone: '#F2EDE4',
+              subtle: '#E5DFD5',
+              charcoal: '#171615',
+              dark: '#242220',
+              muted: '#736E66',
+              gold: '#C5A880',
+              goldHover: '#B29369'
+            }
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-craft-bg text-craft-dark antialiased selection:bg-craft-gold selection:text-white">
+
+  <!-- Top Announcement / Direct Contact Strip -->
+  <div class="bg-craft-charcoal text-[#FAF8F5] text-xs py-2 px-4 border-b border-[#2A2825]">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-craft-gold inline-block animate-pulse"></span>
+        <span class="text-[11px] tracking-wider uppercase text-craft-gold font-medium">Interior Designs for Houses</span>
+        <span class="text-[#736E66] hidden sm:inline">•</span>
+        <span class="text-[11px] text-[#A8A29A] hidden sm:inline">Crafted by Abdul Samad Y</span>
+      </div>
+      <div class="flex items-center gap-5 text-[11px]">
+        <a href="tel:8113807210" class="hover:text-craft-gold transition-colors flex items-center gap-1.5 font-medium">
+          <i data-lucide="phone" class="w-3 h-3 text-craft-gold"></i>
+          <span>+91 8113807210</span>
+        </a>
+        <span class="text-[#423E3A]">|</span>
+        <a href="https://www.instagram.com/_interio_craft_?stkn=MWV5enNsamdlY25uaw==" target="_blank" rel="noopener noreferrer" class="hover:text-craft-gold transition-colors flex items-center gap-1.5 font-medium">
+          <i data-lucide="instagram" class="w-3 h-3 text-craft-gold"></i>
+          <span>@_interio_craft_</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="sticky top-0 z-40 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 bg-craft-charcoal flex items-center justify-center text-white transition-transform group-hover:scale-105 shadow-sm rounded-sm">
+          <span class="font-serif text-xl font-bold tracking-tighter text-craft-gold">IC</span>
+        </div>
+        <div>
+          <span class="font-serif text-2xl font-bold tracking-tight text-craft-charcoal block leading-none">InterioCraft</span>
+          <span class="text-[10px] tracking-[0.22em] uppercase text-craft-muted block mt-1">House Interior Designs</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8 text-xs font-medium uppercase tracking-[0.15em] text-craft-muted">
+        <a href="#our-works" class="hover:text-craft-charcoal transition-colors">Our Works</a>
+        <a href="#services" class="hover:text-craft-charcoal transition-colors">Services</a>
+        <a href="#about" class="hover:text-craft-charcoal transition-colors">About Designer</a>
+        <a href="#contact" class="hover:text-craft-charcoal transition-colors">Contact</a>
+      </nav>
+
+      <!-- CTA Buttons -->
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/918113807210?text=Hi%20Abdul%20Samad,%20I'm%20interested%20in%20house%20interior%20designs%20by%20InterioCraft" target="_blank" rel="noopener noreferrer" class="btn-whatsapp !py-2 !px-4 text-xs hidden sm:inline-flex">
+          <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+          <span>WhatsApp Us</span>
+        </a>
+        <a href="tel:8113807210" class="btn-primary !py-2 !px-4 text-xs hidden lg:inline-flex">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-craft-gold"></i>
+          <span>Call: 8113807210</span>
+        </a>
+        <button onclick="toggleMobileMenu()" class="p-2 rounded md:hidden hover:bg-craft-stone text-craft-charcoal" aria-label="Toggle Navigation Menu">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-craft-surface border-b border-craft-subtle px-6 py-5 shadow-lg">
+      <div class="flex flex-col gap-4 text-sm font-medium uppercase tracking-wider text-craft-muted">
+        <a href="#our-works" onclick="toggleMobileMenu()" class="hover:text-craft-charcoal py-1">Our Works</a>
+        <a href="#services" onclick="toggleMobileMenu()" class="hover:text-craft-charcoal py-1">Services</a>
+        <a href="#about" onclick="toggleMobileMenu()" class="hover:text-craft-charcoal py-1">About Designer</a>
+        <a href="#contact" onclick="toggleMobileMenu()" class="hover:text-craft-charcoal py-1">Contact</a>
+        <div class="pt-3 border-t border-craft-subtle flex flex-col gap-2">
+          <a href="tel:8113807210" class="btn-primary text-xs w-full text-center">
+            <i data-lucide="phone" class="w-3.5 h-3.5 text-craft-gold"></i>
+            Call Abdul Samad Y: 8113807210
+          </a>
+          <a href="https://wa.me/918113807210?text=Hi%20Abdul%20Samad,%20I'm%20interested%20in%20house%20interior%20designs%20by%20InterioCraft" target="_blank" rel="noopener noreferrer" class="btn-whatsapp text-xs w-full text-center">
+            <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+            Chat on WhatsApp
+          </a>
+          <a href="https://www.instagram.com/_interio_craft_?stkn=MWV5enNsamdlY25uaw==" target="_blank" rel="noopener noreferrer" class="btn-outline text-xs w-full text-center">
+            <i data-lucide="instagram" class="w-3.5 h-3.5 text-[#E1306C]"></i>
+            Instagram @_interio_craft_
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section (Minimal & Simple) -->
+  <section class="relative pt-12 pb-16 md:pt-20 md:pb-24 overflow-hidden border-b border-craft-subtle">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Copy -->
+        <div class="lg:col-span-7">
+          <div class="inline-flex items-center gap-2 px-3 py-1 bg-craft-stone rounded-full text-craft-muted text-xs font-semibold tracking-wider uppercase mb-6">
+            <span class="w-1.5 h-1.5 rounded-full bg-craft-gold"></span>
+            Minimal & Simple Residential Interiors
+          </div>
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-craft-charcoal leading-[1.1] mb-6">
+            Thoughtfully Crafted Interior Designs for Modern Houses.
+          </h1>
+          <p class="text-craft-muted text-base sm:text-lg leading-relaxed mb-8 max-w-2xl font-light">
+            Welcome to <strong class="text-craft-charcoal font-semibold">InterioCraft</strong>, led by interior designer <strong class="text-craft-charcoal font-semibold">Abdul Samad Y</strong>. We design clean, minimal, and highly functional living spaces, modular kitchens, custom wardrobes, and architectural woodwork tailored precisely to your home.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-wrap items-center gap-4">
+            <a href="#our-works" class="btn-primary">
+              <span>Explore Our Works</span>
+              <i data-lucide="arrow-down" class="w-4 h-4"></i>
+            </a>
+            <a href="https://wa.me/918113807210?text=Hi%20Abdul%20Samad,%20I'm%20interested%20in%20house%20interior%20designs%20by%20InterioCraft" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span>WhatsApp Us: 8113807210</span>
+            </a>
+          </div>
+
+          <!-- Trust Badges Strip -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-10 mt-10 border-t border-craft-subtle">
+            <div>
+              <span class="font-serif text-2xl font-bold text-craft-charcoal block">100%</span>
+              <span class="text-xs text-craft-muted tracking-wide">Customized Layouts</span>
+            </div>
+            <div>
+              <span class="font-serif text-2xl font-bold text-craft-charcoal block">Minimal</span>
+              <span class="text-xs text-craft-muted tracking-wide">Simple & Clean Finish</span>
+            </div>
+            <div>
+              <span class="font-serif text-2xl font-bold text-craft-charcoal block">Turnkey</span>
+              <span class="text-xs text-craft-muted tracking-wide">Design to Execution</span>
+            </div>
+            <div>
+              <span class="font-serif text-2xl font-bold text-craft-charcoal block">Direct</span>
+              <span class="text-xs text-craft-muted tracking-wide">Founder Consultation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Image Preview -->
+        <div class="lg:col-span-5">
+          <div class="relative group cursor-pointer" onclick="openLightbox(0)">
+            <div class="aspect-[4/3] rounded-sm overflow-hidden shadow-xl border border-craft-subtle bg-craft-stone relative">
+              <img src="assets/images/work-1-tv-unit.jpg" alt="InterioCraft Modern Living Room & TV Unit" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+              <div class="absolute bottom-5 left-5 right-5 text-white">
+                <span class="text-[11px] uppercase tracking-widest text-craft-gold font-medium block mb-1">Featured Living Space</span>
+                <p class="font-serif text-xl font-bold leading-snug">Fluted TV Console & Marble Feature Wall</p>
+                <div class="flex items-center gap-2 mt-2 text-xs text-white/80">
+                  <i data-lucide="maximize-2" class="w-3.5 h-3.5 text-craft-gold"></i>
+                  <span>Click to view project details</span>
+                </div>
+              </div>
+            </div>
+            <!-- Decorative badge -->
+            <div class="absolute -bottom-4 -right-3 sm:-right-4 bg-craft-surface border border-craft-subtle p-3 rounded-sm shadow-md flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-craft-charcoal flex items-center justify-center text-craft-gold">
+                <i data-lucide="check" class="w-4 h-4"></i>
+              </div>
+              <div class="text-left">
+                <p class="text-[11px] font-semibold text-craft-charcoal uppercase tracking-wider">Abdul Samad Y</p>
+                <p class="text-[10px] text-craft-muted">Lead Interior Designer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       OUR WORKS SECTION (Highlighted Company Projects)
+       ============================================== -->
+  <section id="our-works" class="py-20 bg-craft-bg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Heading -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <div class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-semibold text-craft-gold mb-3">
+            <span class="w-8 h-[1px] bg-craft-gold"></span>
+            Portfolio & Execution
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-craft-charcoal tracking-tight">
+            Our Works
+          </h2>
+          <p class="text-craft-muted text-sm sm:text-base mt-2 max-w-xl font-light">
+            A showcase of house interior projects designed and completed by InterioCraft. Click any design to view full details and high-resolution photo.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap items-center gap-2 border border-craft-subtle p-1.5 bg-craft-surface rounded-sm">
+          <button onclick="filterWorks('all')" class="filter-tab active px-3.5 py-1.5 text-xs font-medium uppercase tracking-wider rounded-sm" data-filter="all">All Works (5)</button>
+          <button onclick="filterWorks('living')" class="filter-tab px-3.5 py-1.5 text-xs font-medium uppercase tracking-wider text-craft-muted hover:text-craft-charcoal rounded-sm" data-filter="living">Living Space</button>
+          <button onclick="filterWorks('kitchen')" class="filter-tab px-3.5 py-1.5 text-xs font-medium uppercase tracking-wider text-craft-muted hover:text-craft-charcoal rounded-sm" data-filter="kitchen">Kitchen & Dining</button>
+          <button onclick="filterWorks('bedroom')" class="filter-tab px-3.5 py-1.5 text-xs font-medium uppercase tracking-wider text-craft-muted hover:text-craft-charcoal rounded-sm" data-filter="bedroom">Bedrooms</button>
+          <button onclick="filterWorks('partitions')" class="filter-tab px-3.5 py-1.5 text-xs font-medium uppercase tracking-wider text-craft-muted hover:text-craft-charcoal rounded-sm" data-filter="partitions">Partitions & Study</button>
+        </div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div id="works-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Work 1: TV Unit -->
+        <article class="work-card bg-craft-surface border border-craft-subtle rounded-sm overflow-hidden flex flex-col" data-category="living">
+          <div class="relative aspect-[4/3] overflow-hidden bg-craft-stone cursor-pointer" onclick="openLightbox(0)">
+            <img src="assets/images/work-1-tv-unit.jpg" alt="Modern TV Unit with Marble Feature Wall" class="w-full h-full object-cover img-zoom" />
+            <div class="absolute top-3 left-3 bg-craft-charcoal/80 backdrop-blur-sm text-white text-[10px] uppercase tracking-widest px-2.5 py-1 rounded-sm">
+              Living Room
+            </div>
+            <div class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-sm text-craft-charcoal p-2 rounded-sm shadow hover:bg-craft-gold hover:text-white transition-colors">
+              <i data-lucide="maximize-2" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-[11px] text-craft-gold uppercase tracking-wider font-semibold mb-1">Signature Entertainment Unit</div>
+              <h3 class="font-serif text-xl font-bold text-craft-charcoal mb-2">
+                Fluted TV Console & Marble Feature Wall
+              </h3>
+              <p class="text-craft-muted text-xs leading-relaxed mb-4">
+                Floor-to-ceiling dark acoustic fluted wood paneling framed with warm recessed LED cove illumination, backlit Italian marble center panel, extensive storage drawers, and a vertical curio shelving tower with integrated spotlights.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                <span class="text-[10px] bg-craft-stone text-craft-muted px-2 py-0.5 rounded-sm">Italian Marble Finish</span>
+                <span class="text-[10px] bg-craft-stone text-craft-muted px-2 py-0.5 rounded-sm">Fluted Panels</span>
+                <span class="text-[10px] bg-craft-stone text-craft-muted px-2 py-0.5 rounded-sm">LED Cove Lighting</span>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-craft-subtle flex items-center justify-between">
+              <button onclick="openLightbox(0)" class="text-xs font-semibold uppercase tracking-wider text-craft-charcoal hover:text-craft-gold transition-colors flex items-center gap-1">
+                View Details <i data-lucide="arrow-right" class="w-3 h-3"></i>
+              </button>
+              <a href="https://wa.me/918113807210?text=Hi%20Abdul%20Samad,%20I'm%20interested%20in%20the%20Fluted%20TV%20Console%20design%20from%20InterioCraft" target="_blank" rel="noopener noreferrer" class="text-xs text-green-600 hover:text-green-700 font-medium flex items-center gap-1">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Inquire
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Work 2: Kitchen & Breakfast Bar -->
+        <article class="work-card bg-craft-surface border border-craft-subtle rounded-sm overflow-hidden flex flex-col" data-category="kitchen">
+          <div class="relative aspect-[4/3] overflow-hidden bg-craft-stone cursor-pointer" onclick="openLightbox(1)">
+            <img src="assets/images/work-2-kitchen-counter.jpg" alt="Contemporary Kitchen Breakfast Counter with Pendant Lights" class="w-full h-full object-cover img-zoom" />
+            <div class="absolute top-3 left-3 bg-craft-charcoal/80 backdrop-blur-sm text-white text-[10px] uppercase tracking-widest px-2.5 py-1 rounded-sm">
+              Kitchen & Dining
+            </div>
+            <div class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-sm text-craft-charcoal p-2 rounded-sm shadow hover:bg-craft-gold hover:text-white transition-colors">
+              <i data-lucide="maximize-2" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-[11px] text-craft-gold uppercase tracking-wider font-semibold mb-1">Culinary Architecture</div>
+              <h3 class="font-serif text-xl font-bold text-craft-charcoal mb-2">
+                Modern Island Counter & Open Kitchen
+              </h3>
+              <p class="text-craft-muted text-xs leading-relaxed mb-4">
+                Custom breakfast bar island featuring vertical slatted paneling, black quartz waterfall counter, suspended lattice pendant lighting, high-gloss smoke grey upper cabinetry, and ambient illuminated display niches.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                <span class="text-[10px] bg-craft-stone text-craft-muted px-2 py-0.5 rounded-sm">Quartz Countertop</span>
+                <span class="text-[10px] bg-craft-stone text-craft-muted px-2 py-0.5 rounded-sm">Pendant Fixtures</span>
+                <span class="text-[10px] bg-craft-stone text-craft-muted px-2 py-0.5 rounded-sm">Slatted Island</span>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-craft-subtle flex items-center justify-between">
+              <button onclick="openLightbox(1)" class="text-xs font-semibold uppercase tracking-wider text-craft-charcoal hover:text-craft-gold transition-colors flex items-center gap-1">
+                View Details <i data-lucide="arrow-right" class="w-3 h-3"></i>
+              </button>
+              <a href="https://wa.me/918113807210?text=Hi%20Abdul%20Samad,%20I'm%20interested%20in%20the%20Modern%20Kitchen%20Counter%20design%20from%20InterioCraft" target="_blank" rel="noopener noreferrer" class="text-xs text-green-600 hover:text-green-700 font-medium flex items-center gap-1">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Inquire
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Work 3: Bedroom Wardrobes -->
+        <article class="work-card bg-craft-surface border border-craft-subtle rounded-sm overflow-hidden flex flex-col" data-category="bedroom">
+          <div class="relative aspect-[4/3] overflow-hidden bg-craft-stone cursor-pointer" onclick="openLightbox(2)">
+            <img src="assets/images/work-3-wardrobes.jpg" alt="High-Gloss Bedroom Wardrobes with Bay Window Seat" class="w-full h-full object-cover img-zoom" />
+            <div class="absolute top-3 left-3 bg-craft-charcoal/80 backdrop-blur-sm text-white text-[10px] uppercase tracking-widest px-2.5 py-1 rounded-sm">
+              Bedroom & Storage
+            </div>
+            <div class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-sm text-craft-charcoal p-2 rounded-sm shadow hover:bg-craft-gold hover:text-white transition-colors">
+              <i data-lucide="maximize-2" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-[11px] text-craft-gold uppercase tracking-wider font-semibold mb-1">Bespoke Millwork</div>
+              <h3 class="font-serif text-xl font-bold text-craft-charcoal mb-2">
+                Glossy Wardrobes & Bay Window Seating
+              </h3>
+              <p class="text-craft-muted text-xs leading-relaxed mb-4">
+                Full-height gloss acrylic modular wardrobe suite in warm ivory-taupe with matte black profile handles, upper overhead lofts, and an integrated cushioned bay window sitting nook with under-bench storage cabinets.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                <span class="text-[10px] bg-craft-stone text-craft-muted px-2 py-0.5 rounded-sm">High-Gloss Acrylic</span>
+                <span class="text-[10px] bg-craft-stone text-craft-muted px-2 py-0.5 rounded-sm">Loft Storage</span>
+                <span class="text-[10px] bg-craft-stone text-craft-muted px-2 py-0.5 rounded-sm">Window Nook</span>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-craft-subtle flex items-center justify-between">
+              <button onclick="openLightbox(2)" class="text-xs font-semibold uppercase tracking-wider text-craft-charcoal hover:text-craft-gold transition-colors flex items-center gap-1">
+                View Details <i data-lucide="arrow-right" class="w-3 h-3"></i>
+              </button>
+              <a href="https://wa.me/918113807210?text=Hi%20Abdul%20Samad,%20I'm%20interested%20in%20the%20Bedroom%20Wardrobes%20with%20Window%20Seat%20from%20InterioCraft" target="_blank" rel="noopener noreferrer" class="text-xs text-green-600 hover:text-green-700 font-medium flex items-center gap-1">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Inquire
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Work 4: Wooden Partition Screen -->
+        <article class="work-card bg-craft-surface border border-craft-subtle rounded-sm overflow-hidden flex flex-col" data-category="partitions">
+          <div class="relative aspect-[4/3] overflow-hidden bg-craft-stone cursor-pointer" onclick="openLightbox(3)">
+            <img src="assets/images/work-4-partition-screen.jpg" alt="Teak Wood Jali Screen and Room Partition" class="w-full h-full object-cover img-zoom" />
+            <div class="absolute top-3 left-3 bg-craft-charcoal/80 backdrop-blur-sm text-white text-[10px] uppercase tracking-widest px-2.5 py-1 rounded-sm">
+              Partitions & Screens
+            </div>
+            <div class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-sm text-craft-charcoal p-2 rounded-sm shadow hover:bg-craft-gold hover:text-white transition-colors">
+              <i data-lucide="maximize-2" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-[11px] text-craft-gold uppercase tracking-wider font-semibold mb-1">Spatial Divider</div>
+              <h3 class="font-serif text-xl font-bold text-craft-charcoal mb-2">
+                Teak Wood Jali & Display Partition
+              </h3>
+              <p class="text-craft-muted text-xs leading-relaxed mb-4">
+                Architectural floor-to-ceiling space divider featuring CNC laser-cut decorative lattice jali screens, warm walnut wood veneer frame, open curio display tiers, and a fluted wainscot base that balances open flow and privacy.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                <span class="text-[10px] bg-craft-stone text-craft-muted px-2 py-0.5 rounded-sm">CNC Jali Lattice</span>
+                <span class="text-[10px] bg-craft-stone text-craft-muted px-2 py-0.5 rounded-sm">Teak/Walnut Wood</span>
+                <span class="text-[10px] bg-craft-stone text-craft-muted px-2 py-0.5 rounded-sm">Curio Shelves</span>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-craft-subtle flex items-center justify-between">
+              <button onclick="openLightbox(3)" class="text-xs font-semibold uppercase tracking-wider text-craft-charcoal hover:text-craft-gold transition-colors flex items-center gap-1">
+                View Details <i data-lucide="arrow-right" class="w-3 h-3"></i>
+              </button>
+              <a href="https://wa.me/918113807210?text=Hi%20Abdul%20Samad,%20I'm%20interested%20in%20the%20Jali%20Partition%20Screen%20from%20InterioCraft" target="_blank" rel="noopener noreferrer" class="text-xs text-green-600 hover:text-green-700 font-medium flex items-center gap-1">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Inquire
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Work 5: Study Unit & Workspace -->
+        <article class="work-card bg-craft-surface border border-craft-subtle rounded-sm overflow-hidden flex flex-col" data-category="partitions">
+          <div class="relative aspect-[4/3] overflow-hidden bg-craft-stone cursor-pointer" onclick="openLightbox(4)">
+            <img src="assets/images/work-5-study-desk.jpg" alt="Minimal Bedroom Study Desk and Overhead Bookcase" class="w-full h-full object-cover img-zoom" />
+            <div class="absolute top-3 left-3 bg-craft-charcoal/80 backdrop-blur-sm text-white text-[10px] uppercase tracking-widest px-2.5 py-1 rounded-sm">
+              Workspaces & Study
+            </div>
+            <div class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-sm text-craft-charcoal p-2 rounded-sm shadow hover:bg-craft-gold hover:text-white transition-colors">
+              <i data-lucide="maximize-2" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-[11px] text-craft-gold uppercase tracking-wider font-semibold mb-1">Ergonomic Living</div>
+              <h3 class="font-serif text-xl font-bold text-craft-charcoal mb-2">
+                Integrated Study Desk & Bookcase Unit
+              </h3>
+              <p class="text-craft-muted text-xs leading-relaxed mb-4">
+                Space-efficient study desk seamlessly integrated into the bedroom suite with under-shelf warm LED task strip, display cubbies for books and plants, soft-close drawers, and an adjoining vertical storage tower.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                <span class="text-[10px] bg-craft-stone text-craft-muted px-2 py-0.5 rounded-sm">Warm Task Lighting</span>
+                <span class="text-[10px] bg-craft-stone text-craft-muted px-2 py-0.5 rounded-sm">Multi-Tier Bookcase</span>
+                <span class="text-[10px] bg-craft-stone text-craft-muted px-2 py-0.5 rounded-sm">Ergonomic Design</span>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-craft-subtle flex items-center justify-between">
+              <button onclick="openLightbox(4)" class="text-xs font-semibold uppercase tracking-wider text-craft-charcoal hover:text-craft-gold transition-colors flex items-center gap-1">
+                View Details <i data-lucide="arrow-right" class="w-3 h-3"></i>
+              </button>
+              <a href="https://wa.me/918113807210?text=Hi%20Abdul%20Samad,%20I'm%20interested%20in%20the%20Bedroom%20Study%20Desk%20design%20from%20InterioCraft" target="_blank" rel="noopener noreferrer" class="text-xs text-green-600 hover:text-green-700 font-medium flex items-center gap-1">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Inquire
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Quick Banner under works -->
+      <div class="mt-16 bg-craft-stone border border-craft-subtle p-8 rounded-sm text-center max-w-3xl mx-auto">
+        <h3 class="font-serif text-2xl font-bold text-craft-charcoal mb-2">Have a House Floor Plan or Custom Idea?</h3>
+        <p class="text-xs sm:text-sm text-craft-muted max-w-lg mx-auto mb-6 font-light">
+          Share your room dimensions or floor plan with Abdul Samad Y for a direct design consultation and estimated budget.
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="https://wa.me/918113807210?text=Hi%20Abdul%20Samad,%20I%20have%20a%20floorplan%20to%20discuss%20for%20house%20interior%20design" target="_blank" rel="noopener noreferrer" class="btn-whatsapp text-xs">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>Send Floorplan on WhatsApp</span>
+          </a>
+          <a href="tel:8113807210" class="btn-outline text-xs">
+            <i data-lucide="phone" class="w-4 h-4 text-craft-gold"></i>
+            <span>Call 8113807210</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==============================================
+       SERVICES SECTION
+       ============================================== -->
+  <section id="services" class="py-20 bg-craft-surface border-y border-craft-subtle">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-semibold text-craft-gold mb-3">
+          <span class="w-6 h-[1px] bg-craft-gold"></span>
+          What We Craft
+          <span class="w-6 h-[1px] bg-craft-gold"></span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-craft-charcoal tracking-tight">
+          Specialized Interior Solutions for Houses
+        </h2>
+        <p class="text-craft-muted text-sm mt-3 font-light">
+          From concept sketches to the final screw, we ensure every element of your home interior is minimal, durable, and functional.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Service 1 -->
+        <div class="p-8 bg-craft-bg border border-craft-subtle rounded-sm hover:border-craft-gold transition-colors">
+          <div class="w-12 h-12 bg-craft-stone rounded-sm flex items-center justify-center text-craft-charcoal mb-6">
+            <i data-lucide="tv" class="w-6 h-6 text-craft-gold"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-craft-charcoal mb-2.5">Living Room & TV Feature Walls</h3>
+          <p class="text-xs text-craft-muted leading-relaxed font-light">
+            Minimalist entertainment consoles, marble and fluted acoustic wall paneling, ambient LED cove illumination, and display niches designed for sleek modern salons.
+          </p>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="p-8 bg-craft-bg border border-craft-subtle rounded-sm hover:border-craft-gold transition-colors">
+          <div class="w-12 h-12 bg-craft-stone rounded-sm flex items-center justify-center text-craft-charcoal mb-6">
+            <i data-lucide="utensils" class="w-6 h-6 text-craft-gold"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-craft-charcoal mb-2.5">Modular Kitchens & Islands</h3>
+          <p class="text-xs text-craft-muted leading-relaxed font-light">
+            Ergonomic cooking spaces with breakfast counters, quartz/granite countertops, soft-close hardware, pull-out pantry units, and ambient task lighting.
+          </p>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="p-8 bg-craft-bg border border-craft-subtle rounded-sm hover:border-craft-gold transition-colors">
+          <div class="w-12 h-12 bg-craft-stone rounded-sm flex items-center justify-center text-craft-charcoal mb-6">
+            <i data-lucide="box" class="w-6 h-6 text-craft-gold"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-craft-charcoal mb-2.5">Bespoke Wardrobes & Storage</h3>
+          <p class="text-xs text-craft-muted leading-relaxed font-light">
+            Floor-to-ceiling acrylic and laminate wardrobes, overhead lofts, sliding systems, integrated dresser mirrors, and bay window storage seating.
+          </p>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="p-8 bg-craft-bg border border-craft-subtle rounded-sm hover:border-craft-gold transition-colors">
+          <div class="w-12 h-12 bg-craft-stone rounded-sm flex items-center justify-center text-craft-charcoal mb-6">
+            <i data-lucide="grid" class="w-6 h-6 text-craft-gold"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-craft-charcoal mb-2.5">Jali Screens & Space Partitions</h3>
+          <p class="text-xs text-craft-muted leading-relaxed font-light">
+            Artisanal CNC laser-cut jali screens and wooden vertical louvers that delineate dining, living, and prayer areas with privacy while maintaining airy openness.
+          </p>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="p-8 bg-craft-bg border border-craft-subtle rounded-sm hover:border-craft-gold transition-colors">
+          <div class="w-12 h-12 bg-craft-stone rounded-sm flex items-center justify-center text-craft-charcoal mb-6">
+            <i data-lucide="laptop" class="w-6 h-6 text-craft-gold"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-craft-charcoal mb-2.5">Home Office & Study Spaces</h3>
+          <p class="text-xs text-craft-muted leading-relaxed font-light">
+            Clean ergonomic workstations with integrated bookshelves, concealed wire pathways, warm reading strips, and customized multi-shelf cabinets.
+          </p>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="p-8 bg-craft-bg border border-craft-subtle rounded-sm hover:border-craft-gold transition-colors">
+          <div class="w-12 h-12 bg-craft-stone rounded-sm flex items-center justify-center text-craft-charcoal mb-6">
+            <i data-lucide="home" class="w-6 h-6 text-craft-gold"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-craft-charcoal mb-2.5">Full House Turnkey Interior</h3>
+          <p class="text-xs text-craft-muted leading-relaxed font-light">
+            End-to-end design and on-site execution for newly built villas, apartments, and complete home renovations with transparent timelines.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==============================================
+       ABOUT DESIGNER SECTION
+       ============================================== -->
+  <section id="about" class="py-20 bg-craft-bg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-craft-surface border border-craft-subtle rounded-sm p-8 sm:p-12 lg:p-16 shadow-sm">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <div class="lg:col-span-5 text-center lg:text-left">
+            <div class="w-24 h-24 sm:w-28 sm:h-28 bg-craft-charcoal rounded-full flex items-center justify-center text-white mx-auto lg:mx-0 mb-6 shadow-md border-2 border-craft-gold">
+              <span class="font-serif text-3xl font-bold text-craft-gold">ASY</span>
+            </div>
+            <span class="text-[11px] font-semibold text-craft-gold uppercase tracking-[0.2em] block mb-1">Founder & Lead Designer</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-craft-charcoal">Abdul Samad Y</h2>
+            <p class="text-xs text-craft-muted uppercase tracking-widest mt-1 mb-6">InterioCraft</p>
+            
+            <div class="flex flex-col sm:flex-row lg:flex-col gap-3 max-w-xs mx-auto lg:mx-0">
+              <a href="tel:8113807210" class="btn-primary !py-2.5 text-xs flex items-center justify-center gap-2">
+                <i data-lucide="phone" class="w-4 h-4 text-craft-gold"></i>
+                <span>Direct Call: 8113807210</span>
+              </a>
+              <a href="https://www.instagram.com/_interio_craft_?stkn=MWV5enNsamdlY25uaw==" target="_blank" rel="noopener noreferrer" class="btn-outline !py-2.5 text-xs flex items-center justify-center gap-2">
+                <i data-lucide="instagram" class="w-4 h-4 text-[#E1306C]"></i>
+                <span>Instagram @_interio_craft_</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 border-t lg:border-t-0 lg:border-l border-craft-subtle pt-8 lg:pt-0 lg:pl-10">
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-craft-charcoal mb-4">
+              "True elegance in a home comes from simplicity, warm textures, and uncluttered utility."
+            </h3>
+            <p class="text-sm text-craft-muted leading-relaxed mb-4 font-light">
+              At <strong class="text-craft-charcoal font-medium">InterioCraft</strong>, we believe every home should be a serene retreat. Rather than overcomplicating spaces with unnecessary clutter, our approach focuses on clean architectural lines, warm ambient lighting, durable woodworks, and seamless modular storage.
+            </p>
+            <p class="text-sm text-craft-muted leading-relaxed mb-6 font-light">
+              Whether you are planning the interior for a new house or upgrading your living room, modular kitchen, or bedroom, you deal directly with me from the initial sketch to the final installation on-site.
+            </p>
+
+            <div class="grid grid-cols-2 gap-4 pt-4 border-t border-craft-subtle">
+              <div>
+                <h4 class="text-xs uppercase font-bold text-craft-charcoal tracking-wider mb-1">Quality Assurance</h4>
+                <p class="text-xs text-craft-muted font-light">Premium plywood, hardware, high-pressure laminates, and acrylic finishes.</p>
+              </div>
+              <div>
+                <h4 class="text-xs uppercase font-bold text-craft-charcoal tracking-wider mb-1">Personalized Supervision</h4>
+                <p class="text-xs text-craft-muted font-light">Direct oversight on material selection, joinery precision, and timely delivery.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       CONTACT & CONSULTATION SECTION
+       ============================================== -->
+  <section id="contact" class="py-20 bg-craft-surface border-t border-craft-subtle">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-semibold text-craft-gold mb-3">
+          <span class="w-6 h-[1px] bg-craft-gold"></span>
+          Get In Touch
+          <span class="w-6 h-[1px] bg-craft-gold"></span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-craft-charcoal tracking-tight">
+          Connect with Abdul Samad Y
+        </h2>
+        <p class="text-craft-muted text-sm mt-3 font-light">
+          Reach out directly via Phone, WhatsApp, or Instagram to discuss your house interior plans.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        
+        <!-- Contact Information Cards (Left) -->
+        <div class="lg:col-span-5 flex flex-col gap-5">
+          
+          <!-- Phone Card -->
+          <a href="tel:8113807210" class="p-6 bg-craft-bg border border-craft-subtle rounded-sm hover:border-craft-charcoal transition-all flex items-start gap-4 group">
+            <div class="w-12 h-12 bg-craft-stone rounded-sm flex items-center justify-center text-craft-charcoal shrink-0 group-hover:bg-craft-charcoal group-hover:text-craft-gold transition-colors">
+              <i data-lucide="phone-call" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <span class="text-[11px] font-semibold text-craft-gold uppercase tracking-wider block">Phone Contact</span>
+              <p class="font-serif text-2xl font-bold text-craft-charcoal mt-0.5">+91 8113807210</p>
+              <p class="text-xs text-craft-muted mt-1">Call Abdul Samad Y directly for consultation & inquiries</p>
+            </div>
+          </a>
+
+          <!-- WhatsApp Card -->
+          <a href="https://wa.me/918113807210?text=Hi%20Abdul%20Samad,%20I'm%20interested%20in%20house%20interior%20designs%20by%20InterioCraft" target="_blank" rel="noopener noreferrer" class="p-6 bg-[#25D366]/5 border border-[#25D366]/30 rounded-sm hover:border-[#25D366] transition-all flex items-start gap-4 group">
+            <div class="w-12 h-12 bg-[#25D366] rounded-sm flex items-center justify-center text-white shrink-0 shadow-sm">
+              <i data-lucide="message-circle" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <span class="text-[11px] font-semibold text-green-700 uppercase tracking-wider block">Instant Chat</span>
+              <p class="font-serif text-2xl font-bold text-craft-charcoal mt-0.5">WhatsApp Chat</p>
+              <p class="text-xs text-craft-muted mt-1">Quick response & share site photos / floorplans</p>
+            </div>
+          </a>
+
+          <!-- Instagram Card -->
+          <a href="https://www.instagram.com/_interio_craft_?stkn=MWV5enNsamdlY25uaw==" target="_blank" rel="noopener noreferrer" class="p-6 bg-craft-bg border border-craft-subtle rounded-sm hover:border-[#E1306C] transition-all flex items-start gap-4 group">
+            <div class="w-12 h-12 bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF] rounded-sm flex items-center justify-center text-white shrink-0 shadow-sm">
+              <i data-lucide="instagram" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <span class="text-[11px] font-semibold text-[#DD2A7B] uppercase tracking-wider block">Instagram Profile</span>
+              <p class="font-serif text-2xl font-bold text-craft-charcoal mt-0.5">@_interio_craft_</p>
+              <p class="text-xs text-craft-muted mt-1">Explore our latest design reels, stories, and completed works</p>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- Consultation Request Form (Right) -->
+        <div class="lg:col-span-7 bg-craft-bg border border-craft-subtle rounded-sm p-8 sm:p-10">
+          <h3 class="font-serif text-2xl font-bold text-craft-charcoal mb-2">Request a Free Design Consultation</h3>
+          <p class="text-xs text-craft-muted mb-6 font-light">
+            Fill in your details below and Abdul Samad Y will get in touch with you.
+          </p>
+
+          <form id="consultation-form" onsubmit="handleConsultationSubmit(event)" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs uppercase tracking-wider font-semibold text-craft-charcoal mb-1.5" for="client-name">Your Name *</label>
+                <input type="text" id="client-name" required placeholder="e.g. Rahul Sharma" class="w-full px-4 py-2.5 text-xs bg-craft-surface border border-craft-subtle rounded-sm focus:border-craft-charcoal focus:outline-none transition-colors" />
+              </div>
+              <div>
+                <label class="block text-xs uppercase tracking-wider font-semibold text-craft-charcoal mb-1.5" for="client-phone">Phone Number *</label>
+                <input type="tel" id="client-phone" required placeholder="e.g. 9876543210" class="w-full px-4 py-2.5 text-xs bg-craft-surface border border-craft-subtle rounded-sm focus:border-craft-charcoal focus:outline-none transition-colors" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs uppercase tracking-wider font-semibold text-craft-charcoal mb-1.5" for="house-type">Space / Property Type</label>
+                <select id="house-type" class="w-full px-4 py-2.5 text-xs bg-craft-surface border border-craft-subtle rounded-sm focus:border-craft-charcoal focus:outline-none transition-colors text-craft-dark">
+                  <option value="Full House Interior">Complete House Interior</option>
+                  <option value="Living Room & TV Unit">Living Room & TV Unit</option>
+                  <option value="Modular Kitchen">Modular Kitchen & Dining</option>
+                  <option value="Bedrooms & Wardrobes">Bedrooms & Wardrobes</option>
+                  <option value="Wooden Partitions & Jali">Partitions & Jali Screen</option>
+                  <option value="Study & Home Office">Study & Home Office</option>
+                  <option value="Home Renovation">Home Renovation</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs uppercase tracking-wider font-semibold text-craft-charcoal mb-1.5" for="location">Location / City</label>
+                <input type="text" id="location" placeholder="e.g. Bangalore, Kerala, etc." class="w-full px-4 py-2.5 text-xs bg-craft-surface border border-craft-subtle rounded-sm focus:border-craft-charcoal focus:outline-none transition-colors" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs uppercase tracking-wider font-semibold text-craft-charcoal mb-1.5" for="message">Your Requirement / Notes</label>
+              <textarea id="message" rows="3" placeholder="Tell us about your house, rooms to design, or any preferred styles..." class="w-full px-4 py-2.5 text-xs bg-craft-surface border border-craft-subtle rounded-sm focus:border-craft-charcoal focus:outline-none transition-colors"></textarea>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center gap-3 pt-2">
+              <button type="submit" class="btn-primary w-full sm:w-auto text-xs">
+                <i data-lucide="send" class="w-3.5 h-3.5 text-craft-gold"></i>
+                <span>Submit Request</span>
+              </button>
+              <button type="button" onclick="sendViaWhatsApp()" class="btn-whatsapp w-full sm:w-auto text-xs">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+                <span>Send via WhatsApp Instead</span>
+              </button>
+            </div>
+          </form>
+
+          <div id="form-success" class="hidden mt-4 p-4 bg-green-50 border border-green-200 rounded-sm text-green-800 text-xs">
+            <div class="flex items-center gap-2 font-semibold mb-1">
+              <i data-lucide="check-circle" class="w-4 h-4 text-green-600"></i>
+              Thank you! Your inquiry has been received.
+            </div>
+            <p class="text-green-700">Abdul Samad Y will contact you shortly at your provided phone number.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Minimal Footer -->
+  <footer class="bg-craft-charcoal text-[#FAF8F5] py-12 border-t border-[#2D2B28]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-[#2A2825]">
+        
+        <!-- Brand -->
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 bg-craft-surface flex items-center justify-center rounded-sm">
+            <span class="font-serif text-lg font-bold text-craft-charcoal">IC</span>
+          </div>
+          <div>
+            <span class="font-serif text-xl font-bold tracking-tight block">InterioCraft</span>
+            <span class="text-[10px] tracking-[0.2em] uppercase text-craft-gold block">House Interior Designs</span>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-[#A8A29A] uppercase tracking-wider">
+          <a href="#our-works" class="hover:text-white transition-colors">Our Works</a>
+          <a href="#services" class="hover:text-white transition-colors">Services</a>
+          <a href="#about" class="hover:text-white transition-colors">About Designer</a>
+          <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+        </div>
+
+        <!-- Social & Phone -->
+        <div class="flex items-center gap-4">
+          <a href="tel:8113807210" class="w-8 h-8 rounded-full bg-[#2A2825] flex items-center justify-center text-[#A8A29A] hover:text-craft-gold hover:bg-[#383531] transition-all" title="Call Abdul Samad Y">
+            <i data-lucide="phone" class="w-4 h-4"></i>
+          </a>
+          <a href="https://wa.me/918113807210" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-[#2A2825] flex items-center justify-center text-[#A8A29A] hover:text-green-400 hover:bg-[#383531] transition-all" title="WhatsApp Chat">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+          </a>
+          <a href="https://www.instagram.com/_interio_craft_?stkn=MWV5enNsamdlY25uaw==" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-[#2A2825] flex items-center justify-center text-[#A8A29A] hover:text-[#E1306C] hover:bg-[#383531] transition-all" title="Instagram Profile">
+            <i data-lucide="instagram" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#736E66]">
+        <p>© 2026 InterioCraft. All rights reserved. Interior Designs for Houses by Abdul Samad Y.</p>
+        <p class="flex items-center gap-1.5">
+          <span>Contact:</span>
+          <a href="tel:8113807210" class="text-craft-gold hover:underline">+91 8113807210</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==============================================
+       FULL-SCREEN IMAGE LIGHTBOX MODAL
+       ============================================== -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 opacity-0 pointer-events-none transition-opacity duration-300">
+    
+    <!-- Close button -->
+    <button onclick="closeLightbox()" class="absolute top-5 right-5 text-white/80 hover:text-white p-2 rounded-full hover:bg-white/10 transition-colors z-20" aria-label="Close Lightbox">
+      <i data-lucide="x" class="w-7 h-7"></i>
+    </button>
+
+    <!-- Prev button -->
+    <button onclick="prevLightbox()" class="absolute left-4 sm:left-8 text-white/70 hover:text-white p-3 rounded-full hover:bg-white/10 transition-colors z-20 hidden sm:block" aria-label="Previous Image">
+      <i data-lucide="chevron-left" class="w-8 h-8"></i>
+    </button>
+
+    <!-- Next button -->
+    <button onclick="nextLightbox()" class="absolute right-4 sm:right-8 text-white/70 hover:text-white p-3 rounded-full hover:bg-white/10 transition-colors z-20 hidden sm:block" aria-label="Next Image">
+      <i data-lucide="chevron-right" class="w-8 h-8"></i>
+    </button>
+
+    <!-- Modal Content Card -->
+    <div class="max-w-4xl w-full max-h-[90vh] bg-craft-charcoal rounded-sm overflow-hidden flex flex-col md:flex-row shadow-2xl border border-white/10 z-10">
+      <!-- Image side -->
+      <div class="md:w-3/5 bg-black flex items-center justify-center max-h-[50vh] md:max-h-[85vh] overflow-hidden">
+        <img id="lightbox-img" src="" alt="Work Preview" class="w-full h-full object-contain" />
+      </div>
+      <!-- Details side -->
+      <div class="md:w-2/5 p-6 sm:p-8 flex flex-col justify-between text-[#FAF8F5] bg-craft-charcoal overflow-y-auto">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span id="lightbox-category" class="text-[10px] uppercase tracking-widest font-semibold text-craft-gold bg-white/5 px-2.5 py-1 rounded-sm">Category</span>
+            <span id="lightbox-index" class="text-xs text-[#736E66]">1 of 5</span>
+          </div>
+          <h3 id="lightbox-title" class="font-serif text-2xl font-bold text-white mb-3">Project Title</h3>
+          <p id="lightbox-desc" class="text-xs text-[#A8A29A] leading-relaxed mb-5">Project description goes here...</p>
+          
+          <div class="mb-6">
+            <span class="text-[10px] uppercase tracking-wider text-craft-gold font-semibold block mb-2">Highlights & Craftsmanship</span>
+            <ul id="lightbox-features" class="space-y-1.5 text-xs text-[#EAE5DD]">
+              <!-- Dynamically populated -->
+            </ul>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-white/10 flex flex-col gap-2.5">
+          <a id="lightbox-whatsapp-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn-whatsapp !py-2.5 text-xs w-full text-center">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>Inquire on WhatsApp</span>
+          </a>
+          <a href="tel:8113807210" class="btn-outline !text-white !border-white/20 hover:!bg-white hover:!text-craft-charcoal !py-2.5 text-xs w-full text-center">
+            <i data-lucide="phone" class="w-4 h-4 text-craft-gold"></i>
+            <span>Call 8113807210</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Quick Actions (WhatsApp & Call) -->
+  <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
+    <a href="tel:8113807210" class="w-12 h-12 rounded-full bg-craft-charcoal text-craft-gold shadow-lg flex items-center justify-center hover:scale-110 transition-transform" title="Call Abdul Samad Y: 8113807210">
+      <i data-lucide="phone" class="w-5 h-5"></i>
+    </a>
+    <a href="https://wa.me/918113807210?text=Hi%20Abdul%20Samad,%20I'm%20interested%20in%20house%20interior%20designs%20by%20InterioCraft" target="_blank" rel="noopener noreferrer" class="w-14 h-14 rounded-full bg-[#25D366] text-white shadow-xl flex items-center justify-center hover:scale-110 transition-transform pulse-wa" title="WhatsApp Chat with InterioCraft">
+      <i data-lucide="message-circle" class="w-7 h-7"></i>
+    </a>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="app.js"></script>
+</body>
+</html>

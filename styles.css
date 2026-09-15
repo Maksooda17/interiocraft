@@ -1,0 +1,186 @@
+/* InterioCraft - Minimal & Contemporary Interior Architecture Stylesheet */
+
+:root {
+  --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  --color-bg: #FAF8F5;
+  --color-surface: #FFFFFF;
+  --color-stone: #F2EDE4;
+  --color-subtle: #E5DFD5;
+  --color-charcoal: #171615;
+  --color-text-main: #242220;
+  --color-text-muted: #736E66;
+  --color-gold: #C5A880;
+  --color-gold-hover: #AF9067;
+  --color-dark-wood: #2D241E;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-editorial {
+  font-family: var(--font-serif);
+}
+
+/* Glass Header */
+.glass-nav {
+  background: rgba(250, 248, 245, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(229, 223, 213, 0.8);
+  transition: all 0.3s ease;
+}
+
+/* Subtle architectural borders */
+.border-subtle {
+  border-color: var(--color-subtle);
+}
+
+/* Minimalist Button Styles */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--color-charcoal);
+  color: #FAF8F5;
+  padding: 0.8rem 1.6rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-gold);
+  color: #171615;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(197, 168, 128, 0.25);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--color-charcoal);
+  border: 1px solid var(--color-charcoal);
+  padding: 0.8rem 1.6rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-charcoal);
+  color: #FAF8F5;
+  transform: translateY(-1px);
+}
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #25D366;
+  color: #FFFFFF;
+  padding: 0.8rem 1.6rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  border-radius: 2px;
+  transition: all 0.25s ease;
+}
+
+.btn-whatsapp:hover {
+  background-color: #20BA59;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
+}
+
+/* Image Card Hover */
+.work-card {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.work-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 35px -10px rgba(23, 22, 21, 0.08);
+}
+
+.work-card .img-zoom {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.work-card:hover .img-zoom {
+  transform: scale(1.04);
+}
+
+/* Filter Tab Active States */
+.filter-tab {
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.filter-tab.active {
+  background-color: var(--color-charcoal);
+  color: #FAF8F5;
+  border-color: var(--color-charcoal);
+}
+
+/* Lightbox Modal */
+#lightbox-modal {
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+#lightbox-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8D2C6;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C5A880;
+}
+
+/* Floating Action Button Pulse */
+@keyframes soft-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.pulse-wa {
+  animation: soft-pulse 2.5s infinite;
+}
